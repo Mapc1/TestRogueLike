@@ -14,8 +14,9 @@ public class MainCamera : MonoBehaviour
 
     void Update()
     {
-        var position = player.position;
-        transform.position = new Vector3(position.x, 10, position.z);
+        var playerPosition = player.position;
+        transform.position = new Vector3(playerPosition.x, 10, playerPosition.z-3);
+        transform.LookAt(playerPosition);
     }
 
     private void FixedUpdate()
