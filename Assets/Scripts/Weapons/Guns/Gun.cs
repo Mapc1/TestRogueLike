@@ -4,13 +4,20 @@ namespace Weapons.Guns
 {
     public abstract class Gun : Weapon
     {
-        [SerializeField] protected int magSize;
         [SerializeField] protected Bullet bullet;
         [SerializeField] protected AudioClip magEmptySound;
         [SerializeField] protected AudioClip reloadSound;
+        [SerializeField] protected int magSize;
 
         protected int bulletsRemaining;
-        
+
+        public override void init()
+        {
+            transform = GetComponent<Transform>();
+            audioSource = GetComponent<AudioSource>();
+            bulletsRemaining = magSize;
+        }
+
         private void Update()
         {
             if (Input.GetButtonDown("Fire1"))
@@ -46,6 +53,7 @@ namespace Weapons.Guns
 
                 bulletsRemaining--;
                 audioSource.PlayOneShot(attackSound);
+                UpdateAmmoCount();
             }
             else
             {
@@ -59,6 +67,18 @@ namespace Weapons.Guns
         {
             bulletsRemaining = magSize;
             audioSource.PlayOneShot(reloadSound);
+            UpdateAmmoCount();
+        }
+
+        public override void UpdateUI()
+        {
+            nameText.SetText(weaponName);
+            UpdateAmmoCount();
+        }
+
+        private void UpdateAmmoCount()
+        {
+                ammoText.SetText($"{bulletsRemaining}/{magSize}");
         }
     }
 }

@@ -1,17 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Characters.Enemy;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private int _health = 5;
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private int maxHP;
+    
+    private int _curHP;
 
     private Rigidbody _rigidbody;
     
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _curHP = maxHP;
     }
 
     void Update()
@@ -23,10 +28,11 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            _health--;
+            _curHP--;
+            healthBar.UpdateHP(_curHP, maxHP);
             _rigidbody.AddForce(Vector3.up * 2, ForceMode.VelocityChange);
             
-            if (_health == 0)
+            if (_curHP == 0)
             {
                 Destroy(gameObject);
             }

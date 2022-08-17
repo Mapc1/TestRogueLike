@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using Weapons;
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
     
     [SerializeField] private Weapon startingWeapon;
     [SerializeField] private Weapon startingWeapon2;
+    [SerializeField] private TextMeshProUGUI gunNameText;
     
     private Rigidbody _rigidbody;
     
@@ -21,18 +23,32 @@ public class Player : MonoBehaviour
     
     private Vector3 _lookPos;
 
-    private Weapon[] _weaponSlots = new Weapon[5];
-    private int _equippedWeapon;
+    public Weapon[] weaponSlots = new Weapon[5];
+    public int equippedWeapon;
 
-    void Start()
+    private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _weaponSlots[0] = startingWeapon;
-        _weaponSlots[1] = startingWeapon2;
-        _equippedWeapon = 0;
+        weaponSlots[0] = startingWeapon;
+        weaponSlots[1] = startingWeapon2;
+        equippedWeapon = 0;
+        
+        // Initialize all weapons including disabled weapons
+        // Workaround to the fact that Start() only gets run on active Game Objects
+        foreach (var weapon in weaponSlots)
+        {
+            if (weapon is null) 
+                continue;
+            
+            weapon.init();
+            weapon.gameObject.SetActive(false);
+        }
+        
+        weaponSlots[equippedWeapon].gameObject.SetActive(true);
+        weaponSlots[equippedWeapon].UpdateUI();
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetButtonDown("Equip Weapon 1"))
             _equipWeapon1Pressed = true;
@@ -64,8 +80,9 @@ public class Player : MonoBehaviour
 
     private void SwitchEquippedWeapon(int index)
     {
-        _weaponSlots[_equippedWeapon].gameObject.SetActive(false);
-        _weaponSlots[index].gameObject.SetActive(true);
-        _equippedWeapon = index;
+        weaponSlots[equippedWeapon].gameObject.SetActive(false);
+        weaponSlots[index].gameObject.SetActive(true);
+        equippedWeapon = index;
+        weaponSlots[equippedWeapon].UpdateUI();
     }
 }

@@ -5,13 +5,8 @@ namespace Weapons.Guns
 {
     public class AssaultRifle : Gun
     {
-        private void Start()
-        {
-            transform = GetComponent<Transform>();
-            audioSource = GetComponent<AudioSource>();
-            bulletsRemaining = magSize;
-        }
-
+        public const string GunName = "Assault Rifle";
+        
         private void Update()
         {
             if (Input.GetButtonDown("Fire1"))
