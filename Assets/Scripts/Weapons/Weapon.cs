@@ -5,10 +5,12 @@ namespace Weapons
 {
     public abstract class Weapon : MonoBehaviour
     {
-        [SerializeField] protected float attackCooldown;
         [SerializeField] protected AudioClip attackSound;
         [SerializeField] protected TextMeshProUGUI ammoText;
         [SerializeField] protected TextMeshProUGUI nameText;
+        
+        [SerializeField] protected int damage;
+        [SerializeField] protected float attackCooldown;
 
         public string weaponName;
         

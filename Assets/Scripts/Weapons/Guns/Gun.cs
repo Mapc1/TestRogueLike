@@ -1,4 +1,6 @@
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using Weapons.Guns.Bullets;
 
 namespace Weapons.Guns
 {
@@ -48,6 +50,7 @@ namespace Weapons.Guns
             {
                 bullet.direction = transform.forward;
                 bullet.spawnPos = transform.position;
+                bullet.damage = damage;
                 var newBullet = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
                 newBullet.gameObject.SetActive(true);
 

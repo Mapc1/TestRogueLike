@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Characters.Enemy;
 using UnityEngine;
+using Weapons.Guns.Bullets;
 
 public class Enemy : MonoBehaviour
 {
@@ -26,13 +27,15 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 6)
+        var bullet = other.gameObject.GetComponent<Bullet>();
+        Debug.Log(bullet.damage);
+        if (other.gameObject.layer == 6 && bullet != null)
         {
-            _curHP--;
+            _curHP -= bullet.damage;
             healthBar.UpdateHP(_curHP, maxHP);
             _rigidbody.AddForce(Vector3.up * 2, ForceMode.VelocityChange);
             
-            if (_curHP == 0)
+            if (_curHP <= 0)
             {
                 Destroy(gameObject);
             }

@@ -5,8 +5,6 @@ namespace Weapons.Guns
 {
     public class AssaultRifle : Gun
     {
-        public const string GunName = "Assault Rifle";
-        
         private void Update()
         {
             if (Input.GetButtonDown("Fire1"))
