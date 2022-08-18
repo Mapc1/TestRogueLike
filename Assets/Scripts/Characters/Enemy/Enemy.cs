@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var bullet = other.gameObject.GetComponent<Bullet>();
-        Debug.Log(bullet.damage);
         if (other.gameObject.layer == 6 && bullet != null)
         {
             _curHP -= bullet.damage;

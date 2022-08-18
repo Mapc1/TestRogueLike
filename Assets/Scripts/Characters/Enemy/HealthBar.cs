@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,22 +6,45 @@ namespace Characters.Enemy
 {
     public class HealthBar : MonoBehaviour
     {
-        private int _curHp;
-        private int _maxHp;
+        [SerializeField] private float tweenSpeed;
+        [SerializeField] private Image foreground;
+        [SerializeField] private Image tween;
 
-        private Image _image;
+        private int _curHP;
+        private int _maxHP;
+        private float _curFill;
+        private float _intendedFill;
+
         
         void Start()
         {
-            _image = GetComponent<Image>();
+            _intendedFill = 1;
+            _curFill = 1;
+        }
+
+        private void Update()
+        {
+            if (Math.Abs(_curFill - _intendedFill) > 0.000005)
+            {
+                _curFill -= tweenSpeed;
+                if (_curFill < _intendedFill)
+                {
+                    _curFill = _intendedFill;
+                }
+                
+                tween.fillAmount = _curFill;
+            }
+
         }
 
         public void UpdateHP(int curHP, int maxHP)
         {
-            _curHp = curHP;
-            _maxHp = maxHP;
+            _curHP = curHP;
+            _maxHP = maxHP;
 
-            _image.fillAmount = (float) _curHp / _maxHp;
+            float newFill = (float) _curHP / _maxHP;
+            foreground.fillAmount = newFill;
+            _intendedFill = newFill;
         }
     }
 }
