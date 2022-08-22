@@ -3,19 +3,22 @@ using TestRogueLike.World.Characters.Players;
 using TMPro;
 using UnityEngine;
 
-public class AmmoCount : MonoBehaviour
+namespace TestRogueLike.UI
 {
-    private TextMeshProUGUI _label;
-    
-    [SerializeField] private PlayerWorld playerWorld;
-
-    private void Awake()
-        => _label = GetComponent<TextMeshProUGUI>();
-
-    private void LateUpdate()
+    public class AmmoCount : MonoBehaviour
     {
-        var item = playerWorld._player._inventory.GetActiveItem();
-        if (item is Gun gun)
-            _label.SetText($"{gun.bulletsRemaining}/{gun.magSize}");
+        private TextMeshProUGUI _label;
+    
+        [SerializeField] private PlayerWorld playerWorld;
+
+        private void Awake()
+            => _label = GetComponent<TextMeshProUGUI>();
+
+        private void LateUpdate()
+        {
+            var item = playerWorld._player._inventory.GetActiveItem();
+            if (item is Gun gun)
+                _label.SetText($"{gun.bulletsRemaining}/{gun.magSize}");
+        }
     }
 }
