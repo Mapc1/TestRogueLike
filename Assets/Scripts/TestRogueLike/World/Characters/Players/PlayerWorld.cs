@@ -22,12 +22,14 @@ namespace TestRogueLike.World.Characters.Players
         private Vector3 _lookPos;
 
         private Player _player;
+        private ItemWorld equippedItemWorld;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
             _player = new Player(maxHP, new Pistol());
-            PlaceWeapon();
+            _player._inventory.AddItem(new AssaultRifle());
+            equippedItemWorld = _player._inventory.GetActiveItem().PlaceItem(weaponHolder);
         }
 
         private void Update()
@@ -60,16 +62,11 @@ namespace TestRogueLike.World.Characters.Players
             }
         }
 
-        private void PlaceWeapon()
-        {
-            var item = _player._inventory.GetActiveItem();
-            item.PlaceItem(weaponHolder);
-        }
-
         private void SwitchEquippedWeapon(int index)
         {
-            _player._inventory.SwitchActiveItem(index);
-            PlaceWeapon();
+            Destroy(equippedItemWorld.gameObject);
+            var item = _player._inventory.SwitchActiveItem(index);
+            equippedItemWorld = item.PlaceItem(weaponHolder);
         }
     }
 }

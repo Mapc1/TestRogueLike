@@ -9,10 +9,6 @@ namespace TestRogueLike.World.Items.Weapons.Guns
         {
             _transform = GetComponent<Transform>();
             _audioSource = GetComponent<AudioSource>();
-            _item = new AssaultRifle();
-            var gun = (Gun)_item;
-            
-            bullet = gun.GetBullet();
         }
         private void Update()
         {

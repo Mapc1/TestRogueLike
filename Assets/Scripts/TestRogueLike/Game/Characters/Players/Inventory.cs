@@ -6,8 +6,8 @@ namespace TestRogueLike.Game.Characters.Players
 {
     public class Inventory
     {
-        private readonly int maxHotbarSize;
-        private readonly int maxInventorySize;
+        private const int MAX_HOTBAR_SIZE = 10;
+        private const int MAX_INVENTORY_SIZE = 30;
         
         private List<Item> _hotbar;
         private List<Item> _inventory;
@@ -24,20 +24,22 @@ namespace TestRogueLike.Game.Characters.Players
 
         public void AddItem(Item item)
         {
-            if (_hotbar.Count < maxHotbarSize)
+            if (_hotbar.Count < MAX_HOTBAR_SIZE)
                 _hotbar.Add(item);
-            else if (_inventory.Count < maxInventorySize)
+            else if (_inventory.Count < MAX_INVENTORY_SIZE)
                 _inventory.Add(item);
             else
                 throw new InventoryFullException(item);
         }
 
-        public void SwitchActiveItem(int index)
+        public Item SwitchActiveItem(int index)
         {
-            if (index >= _hotbar.Count || index >= maxHotbarSize)
-                return;
+            if (index >= _hotbar.Count || index >= MAX_HOTBAR_SIZE)
+                throw new IndexGreaterThanHotbarSize(index, MAX_HOTBAR_SIZE);
             
             activeItem = index;
+
+            return GetActiveItem();
         }
 
         public Item GetActiveItem()

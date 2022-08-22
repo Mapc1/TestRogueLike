@@ -950,8 +950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9191c611144e5739ccdc87552e7178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  template: {fileID: 4992931408397244726, guid: c0c4cd52755460e209d27b1565591d2c, type: 3}
   pistolModel: {fileID: 4777519553440080099, guid: b5a658c518afdb51c864257743fabcbb, type: 3}
+  assaultRifleModel: {fileID: 4948442284643580053, guid: 80df5fd57c6e84c76a6586cb8601330e, type: 3}
 --- !u!4 &927276573
 Transform:
   m_ObjectHideFlags: 0
@@ -960,7 +960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927276571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6970303, y: 0.26876488, z: 0.65979236}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

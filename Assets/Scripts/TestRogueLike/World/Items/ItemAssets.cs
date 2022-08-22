@@ -11,7 +11,6 @@ private void Awake()
         Instance = this;
     }
 
-    public GameObject template;
-
     public GameObject pistolModel;
+    public GameObject assaultRifleModel;
 }

@@ -11,7 +11,7 @@ namespace TestRogueLike.World.Items
         
         protected Item _item;
 
-        public void SetItem(Item item)
+        public virtual void SetItem(Item item)
         {
             _item = item;
         }

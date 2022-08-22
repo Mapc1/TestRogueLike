@@ -1,3 +1,4 @@
+using TestRogueLike.Game.Items;
 using TestRogueLike.Game.Items.Weapons;
 using TestRogueLike.Game.Items.Weapons.Guns;
 using TestRogueLike.World.Items.Weapons.Guns.Bullets;
@@ -36,6 +37,13 @@ namespace TestRogueLike.World.Items.Weapons.Guns
             }
         }
 
+        public override void SetItem(Item item)
+        {
+            _item = item;
+            var gun = (Gun)item;
+            bullet = gun.GetBullet();
+        }
+
         protected override void Attack()
         {
             if (Time.time < nextAttackTime) return;
@@ -44,7 +52,6 @@ namespace TestRogueLike.World.Items.Weapons.Guns
             
             if (gun.bulletsRemaining > 0)
             {
-                Debug.Log($"Bullet: {bullet} | transform: {_transform}");
                 bullet.direction = _transform.forward;
                 bullet.spawnPos = _transform.position;
                 bullet.damage = gun.damage;

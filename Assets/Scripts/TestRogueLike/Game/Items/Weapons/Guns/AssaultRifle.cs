@@ -9,7 +9,7 @@ namespace TestRogueLike.Game.Items.Weapons.Guns
         private const float COOLDOWN = 0.15f;
         private const int MAGSIZE = 30;
         private const BulletType BULLET = BulletType.Medium;
-        private static readonly GameObject _mesh = ItemAssets.Instance.pistolModel;
+        private static readonly GameObject _mesh = ItemAssets.Instance.assaultRifleModel;
         
         public AssaultRifle() 
             : base(NAME, _mesh, DAMAGE, COOLDOWN, MAGSIZE, BULLET) {}
