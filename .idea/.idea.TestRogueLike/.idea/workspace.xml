@@ -2,11 +2,583 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c50f215-39d7-4e6f-a830-71d967f59980" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Exceptions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Exceptions/Characters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Character.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Character.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/BasicEnemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/BasicEnemy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/Enemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/Enemy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Item.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Item.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/AssaultRifle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/AssaultRifle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Gun.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Gun.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Pistol.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Pistol.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Shotgun.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Shotgun.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Weapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Weapon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Cameras.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Cameras/MainCamera.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/ItemWorld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/ItemWorld.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletAssets.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletAssets.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/HeavyBulletWorld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/HeavyBulletWorld.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/LightBulletWorld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/LightBulletWorld.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/MediumBulletWorld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/MediumBulletWorld.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/ShotgunSlugWorld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/ShotgunSlugWorld.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/PistolWorld.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hpbar_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hpbar_background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hpbar_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hpbar_foreground.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hpbar_tween.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hpbar_tween.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dirt.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dirt.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/EnemySkin.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/EnemySkin.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Gold.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Gold.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Grass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Grass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Iron.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Iron.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PhysMaterials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PhysMaterials/NoFriction.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PhysMaterials/NoFriction.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AssaultRifleBullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AssaultRifleBullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DirtGrassTop.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DirtGrassTop.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PistolBullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PistolBullet.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/HealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/Enemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/Enemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/HealthBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Enemy/HealthBar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainCamera.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Cameras/MainCamera.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/AssaultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/AssaultRifleWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/AssaultRifle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/AssaultRifleWorld.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets/AssaultRifleBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets/AssaultRifleBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets/PistolBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets/PistolBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Gun.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/PistolWorld.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/WeaponWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/WeaponWorld.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/50_sniper Shot.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/50_sniper Shot.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Laser_Machine_Gun.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Laser_Machine_Gun.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Machine Gun.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Machine Gun.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Martian_Death_Ray.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Martian_Death_Ray.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Minigun-Jim.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/Minigun-Jim.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/SG550-1.WAV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/SG550-1.WAV.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ak47_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_boltslap.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_boltslap.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_forearm.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/aug_forearm.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp_deploy.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/awp_deploy.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/boltdown.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/boltdown.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/boltpull1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/boltpull1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/boltup.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/boltup.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep4.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_beep5.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_click.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_click.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarm (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarm (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarm.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarm.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarmed (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarmed (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarmed.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_disarmed.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_explode1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_explode1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_explode1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_explode1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_plant (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_plant (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_plant.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4_plant.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4armed.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4armed.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4button.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4button.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4on.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/c4on.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/clipin1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/clipin1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/clipout1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/clipout1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/de_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/de_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/de_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/de_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/de_deploy.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/de_deploy.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/deagle-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/deagle-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/deagle-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/deagle-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/dryfire_pistol.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/dryfire_pistol.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/dryfire_rifle.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/dryfire_rifle.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_deploy.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_deploy.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_fire.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_fire.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_leftclipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_leftclipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_reloadstart.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_reloadstart.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_rightclipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_rightclipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_sliderelease.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_sliderelease.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_twirl.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/elite_twirl.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_slidepull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_slidepull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_sliderelease.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/fiveseven_sliderelease.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/flashbang-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/flashbang-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/flashbang-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/flashbang-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipin (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipin (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipout (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipout (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_slide.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/g3sg1_slide.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_foldback.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/galil_foldback.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/generic_reload.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/generic_reload.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/generic_shot_reload.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/generic_shot_reload.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-2 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-2 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/glock18-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/grenade_hit1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/grenade_hit1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/grenade_hit2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/grenade_hit2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/grenade_hit3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/grenade_hit3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/he_bounce-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/he_bounce-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/headshot2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/headshot2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/hegrenade-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/hegrenade-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/hegrenade-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/hegrenade-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_deploy1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_deploy1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_deploy1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_deploy1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit1.sfk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit1.sfk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit2 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit2 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit3 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit3 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit4 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit4 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hit4.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hitwall1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hitwall1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hitwall1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hitwall1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hitwall2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_hitwall2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash2 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash2 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_slash2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_stab (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_stab (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_stab.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/knife_stab.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m16_boltcatch.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m16_boltcatch.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-2 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-2 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_boxin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_boxin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_boxout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_boxout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_chain.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_chain.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_coverdown.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_coverdown.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_coverup.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m249_coverup.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3_insertshell.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3_insertshell.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3_pump (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3_pump (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3_pump.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m3_pump.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipin (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipin (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipout (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipout (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_deploy (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_deploy (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_deploy.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_deploy.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_silencer_off.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_silencer_off.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_silencer_on.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_silencer_on.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-2 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-2 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/m4a1_unsil-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mac10_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mobb-gunshot-qbh.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mobb-gunshot-qbh.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5_slideback.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5_slideback.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_boltslap.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_boltslap.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_safety.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/mp5k_safety.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipin (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipin (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipout (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipout (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_sclip.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_sclip.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_slidepull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_slidepull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_sliderelease (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_sliderelease (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_sliderelease.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p228_sliderelease.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_cliprelease.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/p90_cliprelease.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/pinpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/pinpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric4.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric5.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_conc-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_conc-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_conc-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_conc-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_metal-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_metal-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_metal-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ric_metal-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_bolt.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_bolt.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_fire-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_fire-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_fire-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/scout_fire-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipin (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipin (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipout (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipout (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg550_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552_boltpull.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552_boltpull.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg552_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg_explode.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sg_explode.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/slideback1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/slideback1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sliderack.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sliderack.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sliderelease1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/sliderelease1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/tmp-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/tmp-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/tmp-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/tmp-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45-2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45-2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45_boltslap.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45_boltslap.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump45_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_boltslide.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_boltslide.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_draw.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_draw.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_magin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_magin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_magout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/ump_magout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp2 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp2 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipin (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipin (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipout (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipout (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_silencer_off.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_silencer_off.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_silencer_on.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_silencer_on.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_slideback.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_slideback.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_sliderelease (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_sliderelease (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_sliderelease.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_sliderelease.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_unsil-1 (2).wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_unsil-1 (2).wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_unsil-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/usp_unsil-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_clipin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_clipin.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_clipout.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_clipout.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_sliderelease.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_sliderelease.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_spindraw.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/vun_spindraw.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/xm1014-1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/xm1014-1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/zoom.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Weapons/Guns/zoom.wav.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +586,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8f0bb7a443bd4d2c8f5bbf0cef067865157800/2a/709b3161/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8f0bb7a443bd4d2c8f5bbf0cef067865157800/42/927325d7/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Cameras/MainCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,7 +611,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2021.3.8f1/Editor/Unity" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Editor/2021.3.8f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -53,10 +628,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4925">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="4925" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -78,6 +653,18 @@
       <workItem from="1660758522212" duration="2261000" />
       <workItem from="1660769339759" duration="844000" />
       <workItem from="1660771324009" duration="6179000" />
+      <workItem from="1661026963717" duration="2863000" />
+      <workItem from="1661029853404" duration="997000" />
+      <workItem from="1661030876848" duration="715000" />
+      <workItem from="1661031611911" duration="107000" />
+      <workItem from="1661031749618" duration="585000" />
+      <workItem from="1661032364958" duration="11387000" />
+      <workItem from="1661074520062" duration="36000" />
+      <workItem from="1661074579239" duration="7959000" />
+      <workItem from="1661102397177" duration="1658000" />
+      <workItem from="1661104728855" duration="790000" />
+      <workItem from="1661114988926" duration="484000" />
+      <workItem from="1661165101429" duration="1491000" />
     </task>
     <servers />
   </component>
@@ -88,5 +675,30 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/PistolWorld.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/PistolWorld.cs" initialLine="10" containingFunctionPresentation="method 'Awake'">
+            <startOffsets>
+              <option value="389" />
+            </startOffsets>
+            <endOffsets>
+              <option value="410" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Player" memberName="startingWeapon" />
+        <PinnedItemInfo parentTag="Type#UnityEngine.Component" memberName="transform" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
