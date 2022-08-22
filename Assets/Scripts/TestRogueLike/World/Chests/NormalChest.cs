@@ -10,29 +10,21 @@ namespace TestRogueLike.World.Chests
 {
     public class NormalChest : Chest
     {
-        private static readonly List<Type> LOOT_OPTIONS = new()
+        private void Awake()
         {
-            typeof(Pistol),
-            typeof(AssaultRifle)
-        };
-        
+            lootOptions = new List<Type>
+            {
+                typeof(Pistol),
+                typeof(AssaultRifle)
+            };
+        }
+
         private void Start()
         {
-            loot = Random.Range(0, LOOT_OPTIONS.Count);
+            loot = Random.Range(0, lootOptions.Count);
             Debug.Log(loot);
             
             isOpened = false;
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.layer != PlayerWorld.LAYER || isOpened) 
-                return;
-            
-            other.gameObject
-                .GetComponent<PlayerWorld>()
-                .AddItem((Item) Activator.CreateInstance(LOOT_OPTIONS[loot]));
-            isOpened = true;
         }
     }
 }

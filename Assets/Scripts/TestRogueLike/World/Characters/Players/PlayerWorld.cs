@@ -1,3 +1,5 @@
+using System;
+using TestRogueLike.Common;
 using TestRogueLike.Exceptions.Characters.Players;
 using TestRogueLike.Game.Characters.Players;
 using TestRogueLike.Game.Items;
@@ -55,6 +57,12 @@ namespace TestRogueLike.World.Characters.Players
                 _equipWeaponButtonPressed = 7;
             else if (Input.GetButtonDown("Equip Weapon 9"))
                 _equipWeaponButtonPressed = 8;
+            if (Input.GetButtonDown("Interact"))
+            {
+                _interactButtonPressed = true;
+                Debug.Log(_interactButtonPressed);
+                
+            }
 
             _verticalInput = Input.GetAxis("Vertical");
             _horizontalInput = Input.GetAxis("Horizontal");
@@ -72,6 +80,16 @@ namespace TestRogueLike.World.Characters.Players
                 SwitchEquippedWeapon(_equipWeaponButtonPressed);
                 _equipWeaponButtonPressed = -1;
             }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.gameObject.layer != Interactable.LAYER || !_interactButtonPressed) 
+                return;
+            
+            var target = other.gameObject.GetComponentInParent<Interactable>();
+            target.Interact(this);
+            _interactButtonPressed = false;
         }
 
         private void SwitchEquippedWeapon(int index)

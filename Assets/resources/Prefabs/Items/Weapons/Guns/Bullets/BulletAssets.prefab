@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48df6249f03048e2940052072da6e102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightBullet: {fileID: 314221544125923768, guid: 797acf8a13ce1d19a9dfff178e9f7b1c, type: 3}
+  mediumBullet: {fileID: 4260014106069723793, guid: e2ee3263e4edc01e8a7d90394b4eafa6, type: 3}
+  heavyBullet: {fileID: 0}
+  shotgunSlug: {fileID: 0}

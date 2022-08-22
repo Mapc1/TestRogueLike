@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8037039291047293220}
   - component: {fileID: 2357976951141914392}
-  - component: {fileID: 7627094545930439954}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NormalChest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,19 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5c60a4e7424a5abab001ee9b6b205b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &7627094545930439954
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241290431411708720}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7661517222917606737
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +58,7 @@ GameObject:
   - component: {fileID: 3919952735548640166}
   - component: {fileID: 4202501052877968395}
   - component: {fileID: 2151938467723247364}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +156,7 @@ GameObject:
   - component: {fileID: 1618335174611456783}
   - component: {fileID: 4340603884390421396}
   - component: {fileID: 204738356092600077}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
