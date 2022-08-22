@@ -21,7 +21,7 @@ namespace TestRogueLike.World.Characters.Enemies
         private void OnTriggerEnter(Collider other)
         {
             var bullet = other.gameObject.GetComponent<BulletWorld>();
-            if (other.gameObject.layer != BulletWorld.BULLET_LAYER || bullet == null)
+            if (other.gameObject.layer != BulletWorld.LAYER || bullet == null)
                 return;
 
             _curHP -= bullet.damage;

@@ -1,10 +1,11 @@
+using TestRogueLike.World.Characters.Players;
 using UnityEngine;
 
 namespace TestRogueLike.World.Items.Weapons.Guns.Bullets
 {
     public abstract class BulletWorld : MonoBehaviour
     {
-        public const int BULLET_LAYER = 6;
+        public const int LAYER = 6;
         
         [SerializeField] protected float speed;
         [SerializeField] protected float maxTravel = 10.0f;
@@ -20,7 +21,7 @@ namespace TestRogueLike.World.Items.Weapons.Guns.Bullets
         {
             _rigidbody = GetComponent<Rigidbody>();
             _transform = GetComponent<Transform>();
-            gameObject.layer = BULLET_LAYER;
+            gameObject.layer = LAYER;
             direction *= speed;
         }
 
@@ -40,7 +41,7 @@ namespace TestRogueLike.World.Items.Weapons.Guns.Bullets
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.layer == 8)
+            if (other.gameObject.layer == PlayerWorld.LAYER)
                 return;
         
             Destroy(gameObject);

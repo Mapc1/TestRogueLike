@@ -6,7 +6,7 @@ namespace TestRogueLike.Game.Characters.Players
 {
     public class Inventory
     {
-        private const int MAX_HOTBAR_SIZE = 10;
+        private const int MAX_HOTBAR_SIZE = 9;
         private const int MAX_INVENTORY_SIZE = 30;
         
         private List<Item> _hotbar;

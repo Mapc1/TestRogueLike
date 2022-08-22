@@ -1,16 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemAssets : MonoBehaviour
+namespace TestRogueLike.World.Items
 {
-    public static ItemAssets Instance { get; private set; }
-    
-private void Awake()
+    public class ItemAssets : MonoBehaviour
     {
-        Instance = this;
-    }
+        public static ItemAssets Instance { get; private set; }
+    
+        private void Awake()
+        {
+            Instance = this;
+        }
 
-    public GameObject pistolModel;
-    public GameObject assaultRifleModel;
+        public GameObject pistolModel;
+        public GameObject assaultRifleModel;
+    }
 }

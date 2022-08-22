@@ -1,3 +1,4 @@
+using TestRogueLike.World.Items;
 using UnityEngine;
 
 namespace TestRogueLike.Game.Items.Weapons.Guns

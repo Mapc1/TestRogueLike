@@ -1,4 +1,6 @@
+using TestRogueLike.Exceptions.Characters.Players;
 using TestRogueLike.Game.Characters.Players;
+using TestRogueLike.Game.Items;
 using TestRogueLike.Game.Items.Weapons.Guns;
 using TestRogueLike.World.Items;
 using UnityEngine;
@@ -7,6 +9,8 @@ namespace TestRogueLike.World.Characters.Players
 {
     public class PlayerWorld : MonoBehaviour
     {
+        public const int LAYER = 8;
+        
         private const float Speed = 5.0f;
     
         [SerializeField] private int maxHP;
@@ -16,8 +20,8 @@ namespace TestRogueLike.World.Characters.Players
     
         private float _verticalInput;
         private float _horizontalInput;
-        private bool _equipWeapon1Pressed;
-        private bool _equipWeapon2Pressed;
+        private int _equipWeaponButtonPressed;
+        private bool _interactButtonPressed;
     
         private Vector3 _lookPos;
 
@@ -28,17 +32,30 @@ namespace TestRogueLike.World.Characters.Players
         {
             _rigidbody = GetComponent<Rigidbody>();
             _player = new Player(maxHP, new Pistol());
-            _player._inventory.AddItem(new AssaultRifle());
             equippedItemWorld = _player._inventory.GetActiveItem().PlaceItem(weaponHolder);
         }
 
         private void Update()
         {
             if (Input.GetButtonDown("Equip Weapon 1"))
-                _equipWeapon1Pressed = true;
+                _equipWeaponButtonPressed = 0;
             else if (Input.GetButtonDown("Equip Weapon 2"))
-                _equipWeapon2Pressed = true;
-        
+                _equipWeaponButtonPressed = 1;
+            else if (Input.GetButtonDown("Equip Weapon 3"))
+                _equipWeaponButtonPressed = 2;
+            else if (Input.GetButtonDown("Equip Weapon 4"))
+                _equipWeaponButtonPressed = 3;
+            else if (Input.GetButtonDown("Equip Weapon 5"))
+                _equipWeaponButtonPressed = 4;
+            else if (Input.GetButtonDown("Equip Weapon 6"))
+                _equipWeaponButtonPressed = 5;
+            else if (Input.GetButtonDown("Equip Weapon 7"))
+                _equipWeaponButtonPressed = 6;
+            else if (Input.GetButtonDown("Equip Weapon 8"))
+                _equipWeaponButtonPressed = 7;
+            else if (Input.GetButtonDown("Equip Weapon 9"))
+                _equipWeaponButtonPressed = 8;
+
             _verticalInput = Input.GetAxis("Vertical");
             _horizontalInput = Input.GetAxis("Horizontal");
 
@@ -50,23 +67,30 @@ namespace TestRogueLike.World.Characters.Players
             _rigidbody.velocity = new Vector3(_horizontalInput, 0, _verticalInput) * Speed;
             _rigidbody.transform.LookAt(new Vector3(_lookPos.x, _rigidbody.position.y, _lookPos.z));
 
-            if (_equipWeapon1Pressed)
+            if (_equipWeaponButtonPressed != -1)
             {
-                SwitchEquippedWeapon(0);
-                _equipWeapon1Pressed = false;
-            }
-            else if (_equipWeapon2Pressed)
-            {
-                SwitchEquippedWeapon(1);
-                _equipWeapon2Pressed = false;
+                SwitchEquippedWeapon(_equipWeaponButtonPressed);
+                _equipWeaponButtonPressed = -1;
             }
         }
 
         private void SwitchEquippedWeapon(int index)
         {
-            Destroy(equippedItemWorld.gameObject);
-            var item = _player._inventory.SwitchActiveItem(index);
-            equippedItemWorld = item.PlaceItem(weaponHolder);
+            try
+            {
+                var item = _player._inventory.SwitchActiveItem(index);
+                Destroy(equippedItemWorld.gameObject);
+                equippedItemWorld = item.PlaceItem(weaponHolder);
+            }
+            catch (IndexGreaterThanHotbarSize msg)
+            {
+                Debug.Log(msg);
+            }
+        }
+
+        public void AddItem(Item item)
+        {
+            _player._inventory.AddItem(item);
         }
     }
 }

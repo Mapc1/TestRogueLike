@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c50f215-39d7-4e6f-a830-71d967f59980" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Exceptions/Characters/Players/IndexGreaterThanHotbarSize.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Exceptions/Characters/Players/IndexGreaterThanHotbarSize.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Chests/NormalChest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Chests/NormalChest.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/AssaultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/AssaultRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Pistol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Pistol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Shotgun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Enemies/EnemyWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Enemies/EnemyWorld.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Players/PlayerWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Players/PlayerWorld.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/ItemAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/ItemAssets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/ItemWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/ItemWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/AssaultRifleWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/AssaultRifleWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/PistolWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/PistolWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/resources/Prefabs/Items/Weapons/Guns/AssaultRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Prefabs/Items/Weapons/Guns/AssaultRifle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/resources/Models/Items/Weapons/Guns/AssaultRifle.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Models/Items/Weapons/Guns/AssaultRifle.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/resources/Models/Items/Weapons/Guns/AssaultRifle.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Models/Items/Weapons/Guns/AssaultRifle.blend1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +26,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8f0bb7a443bd4d2c8f5bbf0cef067865157800/2a/709b3161/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8f0bb7a443bd4d2c8f5bbf0cef067865157800/42/927325d7/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c00f838d158c4f4185913cb3b6f74bb2468a00/d5/fe343943/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Cameras/MainCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Chests/Chest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -63,10 +68,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4925">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="4925" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -100,7 +105,8 @@
       <workItem from="1661104728855" duration="790000" />
       <workItem from="1661114988926" duration="484000" />
       <workItem from="1661165101429" duration="1788000" />
-      <workItem from="1661172182381" duration="1874000" />
+      <workItem from="1661172182381" duration="3760000" />
+      <workItem from="1661176002886" duration="1987000" />
     </task>
     <servers />
   </component>
@@ -113,23 +119,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Item.cs</url>
-          <line>22</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Item.cs" initialLine="22" containingFunctionPresentation="method 'PlaceItem'">
-            <startOffsets>
-              <option value="651" />
-            </startOffsets>
-            <endOffsets>
-              <option value="672" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Player" memberName="startingWeapon" />
