@@ -60,8 +60,6 @@ namespace TestRogueLike.World.Characters.Players
             if (Input.GetButtonDown("Interact"))
             {
                 _interactButtonPressed = true;
-                Debug.Log(_interactButtonPressed);
-                
             }
 
             _verticalInput = Input.GetAxis("Vertical");

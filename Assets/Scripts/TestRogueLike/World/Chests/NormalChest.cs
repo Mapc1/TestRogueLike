@@ -22,8 +22,6 @@ namespace TestRogueLike.World.Chests
         private void Start()
         {
             loot = Random.Range(0, lootOptions.Count);
-            Debug.Log(loot);
-            
             isOpened = false;
         }
     }
