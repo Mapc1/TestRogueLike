@@ -27,7 +27,7 @@ namespace TestRogueLike.World.Characters.Players
     
         private Vector3 _lookPos;
 
-        private Player _player;
+        public Player _player { get; private set; }
         private ItemWorld equippedItemWorld;
 
         private void Awake()
@@ -105,8 +105,6 @@ namespace TestRogueLike.World.Characters.Players
         }
 
         public void AddItem(Item item)
-        {
-            _player._inventory.AddItem(item);
-        }
+            => _player._inventory.AddItem(item);
     }
 }
