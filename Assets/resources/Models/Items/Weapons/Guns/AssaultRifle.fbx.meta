@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: 884495413aac02838be381435ec4a6ba
+guid: c402d2f4e2255dc56989a83e7b75b653
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Iron
-    second: {fileID: 2100000, guid: 787df99d9f32a2c0d9b20df09bd71cab, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PlasticFlat
-    second: {fileID: 2100000, guid: 619bf33b14a19a421ad8787025fe54b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SmoothIron
-    second: {fileID: 2100000, guid: 8b8956fa40451f27f82084a9c0957409, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: e090bd0c75bceef65a096fb639ae7aed, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -55,7 +35,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 0.4
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -108,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.1
+    globalScale: 0.004
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
