@@ -17,13 +17,10 @@ public class InventoryUI : MonoBehaviour
     
     private void Start()
     {
-        _inventory = Player.Instance.Inventory;
+        _inventory = Inventory.Instance;
         _inventory.OnInventoryChangedCallback += UpdateUI;
-
         _slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-
         IsInventoryOpen = inventoryUI.activeSelf;
-
         Instance = this;
     }
 
@@ -43,8 +40,7 @@ public class InventoryUI : MonoBehaviour
             if (i < _inventory._inventory.Count)
             {
                 _slots[i].AddItem(_inventory._inventory[i]);
-            }
-            else
+            } else 
             {
                 _slots[i].ClearSlot();
             }

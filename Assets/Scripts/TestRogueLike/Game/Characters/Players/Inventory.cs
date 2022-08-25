@@ -9,6 +9,9 @@ namespace TestRogueLike.Game.Characters.Players
     {
         public static Inventory Instance;
 
+        public delegate void OnHotbarChanged();
+        public OnHotbarChanged OnHotbarChangedCallback;
+        
         public delegate void OnInventoryChanged();
         public OnInventoryChanged OnInventoryChangedCallback;
 
@@ -35,15 +38,15 @@ namespace TestRogueLike.Game.Characters.Players
 
         public void AddItem(Item item)
         {
-            if (_inventory.Count < MAX_INVENTORY_SIZE) {
-                _inventory.Add(item);
-                OnInventoryChangedCallback.Invoke();
-            } else if (_hotbar.Count < MAX_HOTBAR_SIZE)
+            if (_hotbar.Count < MAX_HOTBAR_SIZE)
             {
                 _hotbar.Add(item);
+                OnHotbarChangedCallback.Invoke();
+            } else if (_inventory.Count < MAX_INVENTORY_SIZE) 
+            {
+                _inventory.Add(item);
                 OnInventoryChangedCallback.Invoke();
-            }
-            else
+            } else
                 throw new InventoryFullException(item);
         }
 
@@ -60,6 +63,7 @@ namespace TestRogueLike.Game.Characters.Players
             
             activeItem = index;
             OnActiveItemChangedCallback.Invoke();
+            OnHotbarChangedCallback.Invoke();
         }
 
         public Item GetActiveItem()
@@ -82,6 +86,7 @@ namespace TestRogueLike.Game.Characters.Players
             }
             
             OnInventoryChangedCallback.Invoke();
+            OnHotbarChangedCallback.Invoke();
             OnActiveItemChangedCallback.Invoke();
         }
     }
