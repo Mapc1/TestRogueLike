@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pistolModel: {fileID: 4777519553440080099, guid: b5a658c518afdb51c864257743fabcbb, type: 3}
+  pistolIcon: {fileID: 21300000, guid: 5784ba0553078f71d8e4d6cd66e567c4, type: 3}
   assaultRifleModel: {fileID: 4948442284643580053, guid: 80df5fd57c6e84c76a6586cb8601330e, type: 3}
+  assaultRifleIcon: {fileID: 21300000, guid: d885de5c96ba3d49d929c5eb731b0bb1, type: 3}

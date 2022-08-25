@@ -12,6 +12,9 @@ namespace TestRogueLike.World.Items
         }
 
         public GameObject pistolModel;
+        public Sprite pistolIcon;
+        
         public GameObject assaultRifleModel;
+        public Sprite assaultRifleIcon;
     }
 }

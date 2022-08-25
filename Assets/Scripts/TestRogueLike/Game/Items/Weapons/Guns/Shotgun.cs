@@ -10,9 +10,10 @@ namespace TestRogueLike.Game.Items.Weapons.Guns
         private const float COOLDOWN = 1.0f;
         private const int MAGSIZE = 6;
         private const BulletType BULLET = BulletType.Slug;
-        private static readonly GameObject _mesh = ItemAssets.Instance.pistolModel;
+        private static readonly GameObject MESH = ItemAssets.Instance.pistolModel;
+        private static readonly Sprite ICON = ItemAssets.Instance.pistolIcon;
         
         public Shotgun() 
-            : base(NAME, _mesh, DAMAGE, COOLDOWN, MAGSIZE, BULLET) {}
+            : base(NAME, MESH, ICON, DAMAGE, COOLDOWN, MAGSIZE, BULLET) {}
     }
 }

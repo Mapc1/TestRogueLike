@@ -14,6 +14,6 @@ namespace TestRogueLike.UI
             => _label = GetComponent<TextMeshProUGUI>();
 
         private void LateUpdate()
-            => _label.SetText(playerWorld._player._inventory.GetActiveItem().name);
+            => _label.SetText(playerWorld.Player.Inventory.GetActiveItem().name);
     }
 }

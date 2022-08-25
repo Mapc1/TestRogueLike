@@ -1,3 +1,4 @@
+using TestRogueLike.Game.Characters.Players;
 using TestRogueLike.World.Items.Weapons.Guns.Bullets;
 using UnityEngine;
 
@@ -18,8 +19,8 @@ namespace TestRogueLike.Game.Items.Weapons.Guns
         public readonly int magSize;
         public int bulletsRemaining { get; private set; }
 
-        protected Gun(string name, GameObject mesh, int attackDamage, float attackCooldown, int magSize, BulletType bulletType) 
-            : base(name, mesh, attackDamage, attackCooldown)
+        protected Gun(string name, GameObject mesh, Sprite icon, int attackDamage, float attackCooldown, int magSize, BulletType bulletType) 
+            : base(name, mesh, icon, attackDamage, attackCooldown)
         {
             bullet = bulletType;
             this.magSize = magSize;
@@ -46,6 +47,13 @@ namespace TestRogueLike.Game.Items.Weapons.Guns
                 BulletType.Slug => BulletAssets.instance.shotgunSlug,
                 _ => null
             };
+        }
+
+        public override void Use()
+        {
+            base.Use();
+            
+            Inventory.Instance.SwitchItemInventoryToHotbar(this, 0);
         }
     }
 }

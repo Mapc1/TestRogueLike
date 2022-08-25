@@ -1,4 +1,3 @@
-using System;
 using TestRogueLike.Common;
 using TestRogueLike.Exceptions.Characters.Players;
 using TestRogueLike.Game.Characters.Players;
@@ -6,6 +5,7 @@ using TestRogueLike.Game.Items;
 using TestRogueLike.Game.Items.Weapons.Guns;
 using TestRogueLike.World.Items;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TestRogueLike.World.Characters.Players
 {
@@ -27,18 +27,23 @@ namespace TestRogueLike.World.Characters.Players
     
         private Vector3 _lookPos;
 
-        public Player _player { get; private set; }
-        private ItemWorld equippedItemWorld;
+        public Player Player { get; private set; }
+        private ItemWorld _equippedItemWorld;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            _player = new Player(maxHP, new Pistol());
-            equippedItemWorld = _player._inventory.GetActiveItem().PlaceItem(weaponHolder);
+            Player = new Player(maxHP, new Pistol());
+            _equippedItemWorld = Inventory.Instance.GetActiveItem().PlaceItem(weaponHolder);
+
+            Inventory.Instance.OnActiveItemChangedCallback += PlaceItemWorld;
         }
 
         private void Update()
         {
+            if (InventoryUI.Instance.IsInventoryOpen)
+                return;
+            
             if (Input.GetButtonDown("Equip Weapon 1"))
                 _equipWeaponButtonPressed = 0;
             else if (Input.GetButtonDown("Equip Weapon 2"))
@@ -75,7 +80,7 @@ namespace TestRogueLike.World.Characters.Players
 
             if (_equipWeaponButtonPressed != -1)
             {
-                SwitchEquippedWeapon(_equipWeaponButtonPressed);
+                Inventory.Instance.SwitchActiveItem(_equipWeaponButtonPressed);
                 _equipWeaponButtonPressed = -1;
             }
         }
@@ -90,21 +95,10 @@ namespace TestRogueLike.World.Characters.Players
             _interactButtonPressed = false;
         }
 
-        private void SwitchEquippedWeapon(int index)
+        private void PlaceItemWorld()
         {
-            try
-            {
-                var item = _player._inventory.SwitchActiveItem(index);
-                Destroy(equippedItemWorld.gameObject);
-                equippedItemWorld = item.PlaceItem(weaponHolder);
-            }
-            catch (IndexGreaterThanHotbarSize msg)
-            {
-                Debug.Log(msg);
-            }
+            Destroy(_equippedItemWorld.gameObject);
+            _equippedItemWorld = Inventory.Instance.GetActiveItem().PlaceItem(weaponHolder);
         }
-
-        public void AddItem(Item item)
-            => _player._inventory.AddItem(item);
     }
 }

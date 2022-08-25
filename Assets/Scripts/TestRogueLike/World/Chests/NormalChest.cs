@@ -12,17 +12,17 @@ namespace TestRogueLike.World.Chests
     {
         private void Awake()
         {
-            lootOptions = new List<Type>
+            LootOptions = new List<Type>
             {
-                //typeof(Pistol),
+                typeof(Pistol),
                 typeof(AssaultRifle)
             };
         }
 
         private void Start()
         {
-            loot = Random.Range(0, lootOptions.Count);
-            isOpened = false;
+            Loot = Random.Range(0, LootOptions.Count);
+            IsOpened = false;
         }
     }
 }

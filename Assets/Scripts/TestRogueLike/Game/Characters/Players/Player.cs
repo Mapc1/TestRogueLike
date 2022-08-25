@@ -4,11 +4,13 @@ namespace TestRogueLike.Game.Characters.Players
 {
     public class Player : Character
     {
-        public Inventory _inventory { get; private set; }
+        public static Player Instance;
+        public Inventory Inventory { get; private set; }
         
         public Player(int maxHP, Item startingItem) : base(maxHP)
         {
-            _inventory = new Inventory(startingItem);
+            Inventory = new Inventory(startingItem);
+            Instance = this;
         }
     }
 }

@@ -3,6 +3,7 @@ using TestRogueLike.Game.Items.Weapons;
 using TestRogueLike.Game.Items.Weapons.Guns;
 using TestRogueLike.World.Items.Weapons.Guns.Bullets;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TestRogueLike.World.Items.Weapons.Guns
 {
@@ -17,6 +18,9 @@ namespace TestRogueLike.World.Items.Weapons.Guns
         
         private void Update()
         {
+            if (InventoryUI.Instance.IsInventoryOpen)
+                return;
+            
             if (Input.GetButtonDown("Fire1"))
                 attackButtonPressed = true;
             else if (Input.GetButtonDown("Reload"))

@@ -7,11 +7,18 @@ namespace TestRogueLike.Game.Items
     {
         public readonly string name;
         public GameObject mesh { get; private set; }
+        public Sprite icon;
 
-        protected Item(string name, GameObject mesh)
+        public virtual void Use()
+        {
+            Debug.Log("Using " + name);
+        }
+
+        protected Item(string name, GameObject mesh, Sprite icon)
         {
             this.name = name;
             this.mesh = mesh;
+            this.icon = icon;
         }
         
         public ItemWorld PlaceItem(Transform parent)

@@ -16,7 +16,7 @@ namespace TestRogueLike.UI
 
         private void LateUpdate()
         {
-            var item = playerWorld._player._inventory.GetActiveItem();
+            var item = playerWorld.Player.Inventory.GetActiveItem();
             if (item is Gun gun)
                 _label.SetText($"{gun.bulletsRemaining}/{gun.magSize}");
             else

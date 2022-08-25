@@ -1,5 +1,6 @@
 using TestRogueLike.Game.Items.Weapons.Guns;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TestRogueLike.World.Items.Weapons.Guns
 {
@@ -12,6 +13,9 @@ namespace TestRogueLike.World.Items.Weapons.Guns
         }
         private void Update()
         {
+            if (InventoryUI.Instance.IsInventoryOpen)
+                return;
+            
             if (Input.GetButtonDown("Fire1"))
                 attackButtonPressed = true;
             else if (Input.GetButtonUp("Fire1"))
