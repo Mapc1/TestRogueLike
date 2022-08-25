@@ -14,7 +14,7 @@ namespace TestRogueLike.World.Chests
         {
             lootOptions = new List<Type>
             {
-                typeof(Pistol),
+                //typeof(Pistol),
                 typeof(AssaultRifle)
             };
         }
