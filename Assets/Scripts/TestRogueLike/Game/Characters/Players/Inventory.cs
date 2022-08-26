@@ -89,5 +89,38 @@ namespace TestRogueLike.Game.Characters.Players
             OnHotbarChangedCallback.Invoke();
             OnActiveItemChangedCallback.Invoke();
         }
+
+        public void SwapItems(Item item1, Item item2)
+        {
+            var index1 = _hotbar.IndexOf(item1);
+            var foundInHotbar1 = true;
+            if (index1 == -1)
+            {
+                index1 = _inventory.IndexOf(item1);
+                foundInHotbar1 = false;
+            }
+            
+            var index2 = _hotbar.IndexOf(item2);
+            var foundInHotbar2 = true;
+            if (index2 == -1)
+            {
+                index2 = _inventory.IndexOf(item2);
+                foundInHotbar2 = false;
+            }
+
+            if (foundInHotbar1)
+                _hotbar[index1] = item2;
+            else
+                _inventory[index1] = item2;
+
+            if (foundInHotbar2)
+                _hotbar[index2] = item1;
+            else
+                _inventory[index2] = item1;
+            
+            OnHotbarChangedCallback.Invoke();
+            OnActiveItemChangedCallback.Invoke();
+            OnInventoryChangedCallback.Invoke();
+        }
     }
 }
