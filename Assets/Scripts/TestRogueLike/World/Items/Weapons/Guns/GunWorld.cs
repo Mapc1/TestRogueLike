@@ -54,7 +54,7 @@ namespace TestRogueLike.World.Items.Weapons.Guns
          
             var gun = (Gun)_item;
             
-            if (gun.bulletsRemaining > 0)
+            if (gun.BulletsRemaining > 0)
             {
                 bullet.direction = _transform.forward;
                 bullet.spawnPos = _transform.position;
@@ -62,7 +62,7 @@ namespace TestRogueLike.World.Items.Weapons.Guns
                 var newBullet = Instantiate(bullet.gameObject, _transform.position, Quaternion.identity);
                 newBullet.gameObject.SetActive(true);
 
-                gun.fire();
+                gun.Fire();
                 _audioSource.PlayOneShot(attackSound);
                 //UpdateAmmoCount();
             }

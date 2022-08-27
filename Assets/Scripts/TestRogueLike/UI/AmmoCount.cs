@@ -1,3 +1,4 @@
+using TestRogueLike.Game.Items;
 using TestRogueLike.Game.Items.Weapons.Guns;
 using TestRogueLike.World.Characters.Players;
 using TMPro;
@@ -8,17 +9,18 @@ namespace TestRogueLike.UI
     public class AmmoCount : MonoBehaviour
     {
         private TextMeshProUGUI _label;
-    
-        [SerializeField] private PlayerWorld playerWorld;
 
-        private void Awake()
-            => _label = GetComponent<TextMeshProUGUI>();
-
-        private void LateUpdate()
+        private void Start()
         {
-            var item = playerWorld.Player.Inventory.GetActiveItem();
+            _label = GetComponent<TextMeshProUGUI>();
+            Item.OnItemUpdateCallback += UpdateText;
+            Game.Characters.Players.Inventory.Instance.OnActiveItemChangedCallback += UpdateText;
+        }
+
+        private void UpdateText(Item item)
+        {
             if (item is Gun gun)
-                _label.SetText($"{gun.bulletsRemaining}/{gun.magSize}");
+                _label.SetText($"{gun.BulletsRemaining}/{gun.MagSize}");
             else
                 _label.SetText("");
         }

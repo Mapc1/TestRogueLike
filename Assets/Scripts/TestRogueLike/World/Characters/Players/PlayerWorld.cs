@@ -95,10 +95,12 @@ namespace TestRogueLike.World.Characters.Players
             _interactButtonPressed = false;
         }
 
-        private void PlaceItemWorld()
+        private void PlaceItemWorld(Item item)
         {
-            Destroy(_equippedItemWorld.gameObject);
-            _equippedItemWorld = Inventory.Instance.GetActiveItem().PlaceItem(weaponHolder);
+            if (_equippedItemWorld != null)
+                Destroy(_equippedItemWorld.gameObject);
+            
+            _equippedItemWorld = item?.PlaceItem(weaponHolder);
         }
     }
 }

@@ -14,13 +14,18 @@ public class HotbarUI : MonoBehaviour
         _inventory = Inventory.Instance;
         _inventory.OnHotbarChangedCallback += UpdateUI;
         _slots = itemsPanel.GetComponentsInChildren<HotbarSlot>();
+
+        for (var i = 0; i < _slots.Length; i++)
+        {
+            _slots[i].SlotNum = i;
+        }
     }
 
     private void UpdateUI()
     {
         for (var i = 0; i < _slots.Length; i++)
         {
-            if (i < _inventory._hotbar.Count)
+            if (_inventory._hotbar[i] != null)
             {
                 _slots[i].AddItem(_inventory._hotbar[i]);
             }

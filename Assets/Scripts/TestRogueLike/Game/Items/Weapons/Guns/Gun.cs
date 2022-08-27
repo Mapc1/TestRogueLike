@@ -14,32 +14,34 @@ namespace TestRogueLike.Game.Items.Weapons.Guns
             Slug
         }
 
-        public readonly BulletType bullet;
+        private readonly BulletType _bullet;
 
-        public readonly int magSize;
-        public int bulletsRemaining { get; private set; }
+        public readonly int MagSize;
+        public int BulletsRemaining { get; private set; }
 
         protected Gun(string name, GameObject mesh, Sprite icon, int attackDamage, float attackCooldown, int magSize, BulletType bulletType) 
             : base(name, mesh, icon, attackDamage, attackCooldown)
         {
-            bullet = bulletType;
-            this.magSize = magSize;
-            bulletsRemaining = magSize;
+            _bullet = bulletType;
+            MagSize = magSize;
+            BulletsRemaining = magSize;
         }
 
-        public int fire()
+        public void Fire()
         {
-            return --bulletsRemaining;
+            BulletsRemaining--;
+            OnItemUpdateCallback.Invoke(this);
         }
 
         public void Reload()
         {
-            bulletsRemaining = magSize;
+            BulletsRemaining = MagSize;
+            OnItemUpdateCallback.Invoke(this);
         }
         
         public BulletWorld GetBullet()
         {
-            return bullet switch
+            return _bullet switch
             {
                 BulletType.Light => BulletAssets.instance.lightBullet,
                 BulletType.Medium => BulletAssets.instance.mediumBullet,
@@ -47,13 +49,6 @@ namespace TestRogueLike.Game.Items.Weapons.Guns
                 BulletType.Slug => BulletAssets.instance.shotgunSlug,
                 _ => null
             };
-        }
-
-        public override void Use()
-        {
-            base.Use();
-            
-            Inventory.Instance.SwitchItemInventoryToHotbar(this, 0);
         }
     }
 }

@@ -22,6 +22,11 @@ public class InventoryUI : MonoBehaviour
         _slots = itemsParent.GetComponentsInChildren<InventorySlot>();
         IsInventoryOpen = inventoryUI.activeSelf;
         Instance = this;
+
+        for (var i = 0; i < _slots.Length; i++)
+        {
+            _slots[i].SlotNum = i;
+        }
     }
 
     public void LateUpdate()
@@ -37,7 +42,7 @@ public class InventoryUI : MonoBehaviour
     {
         for (var i = 0; i < _slots.Length; i++)
         {
-            if (i < _inventory._inventory.Count)
+            if (_inventory._inventory[i] != null)
                 _slots[i].AddItem(_inventory._inventory[i]);
             else 
                 _slots[i].ClearSlot();

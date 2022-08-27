@@ -1,4 +1,5 @@
 using TestRogueLike.Game.Items;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace TestRogueLike.UI.Inventory
@@ -9,7 +10,21 @@ namespace TestRogueLike.UI.Inventory
 
         public void OnRemoveButton()
         {
-            Game.Characters.Players.Inventory.Instance.RemoveItemInventory(Item);
+            Game.Characters.Players.Inventory.Instance.RemoveItem(Item);
+        }
+
+        public override void OnDrop(PointerEventData eventData)
+        {
+            base.OnDrop(eventData);
+            
+            if (eventData.pointerDrag == null)
+                return;
+
+            var other = eventData.pointerDrag.gameObject.GetComponent<Slot>();
+            var otherSlot = other.SlotNum;
+            var inHotbar = other is HotbarSlot;
+
+            Game.Characters.Players.Inventory.Instance.SwapItems(SlotNum, false, otherSlot, inHotbar);
         }
 
         public override void AddItem(Item item)

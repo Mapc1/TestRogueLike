@@ -14,6 +14,9 @@ namespace TestRogueLike.UI.Inventory
             
             private RectTransform _itemCursor;
             private CanvasGroup _canvasGroup;
+
+            public int SlotNum;
+            public bool Dropped;
         #endregion
 
         private void Start()
@@ -22,22 +25,22 @@ namespace TestRogueLike.UI.Inventory
             _canvasGroup = GetComponent<CanvasGroup>();
         }
 
-        #region DraggableMethods 
-            public virtual void OnDrop(PointerEventData eventData)
-            {
-                Debug.Log("OnDrop");
-                
-                if (eventData.pointerDrag == null)
-                    return;
+        #region DraggableMethods
 
-                var item = eventData.pointerDrag.GetComponent<Slot>().Item;
-                Game.Characters.Players.Inventory.Instance.SwapItems(Item, item);
-            }
+        public virtual void OnDrop(PointerEventData eventData)
+        {
+            Debug.Log("OnDrop");
+            var slot = eventData.pointerDrag.gameObject.GetComponent<Slot>();
+            if (slot != null)
+                slot.Dropped = true;
+        }
 
             public void OnPointerDown(PointerEventData eventData)
-            {
-                _canvasGroup.alpha = 0.6f;
-            }
+                => _canvasGroup.alpha = 0.6f;
+           
+
+            public void OnPointerUp(PointerEventData eventData)
+                => _canvasGroup.alpha = 1.0f;
 
             public void OnBeginDrag(PointerEventData eventData)
             {
@@ -51,19 +54,22 @@ namespace TestRogueLike.UI.Inventory
             public void OnEndDrag(PointerEventData eventData)
             {
                 _itemCursor.gameObject.SetActive(false);
-                icon.enabled = true;
                 _canvasGroup.blocksRaycasts = true;
+                if (!Dropped)
+                    icon.enabled = true;
+                Dropped = false;
             }
 
             public void OnDrag(PointerEventData eventData)
-            {
-                _itemCursor.transform.position = Input.mousePosition;
-            }
+                => _itemCursor.transform.position = Input.mousePosition;
         #endregion
 
         #region SlotMethods
             public virtual void AddItem(Item item)
             {
+                if (item == null)
+                    return;
+                
                 Item = item;
                 icon.sprite = Item.icon;
                 icon.enabled = true;
@@ -76,10 +82,5 @@ namespace TestRogueLike.UI.Inventory
                 icon.enabled = false;
             }
         #endregion
-
-        public void OnPointerUp(PointerEventData eventData)
-        {
-            _canvasGroup.alpha = 1.0f;
-        }
     }
 }

@@ -11,116 +11,127 @@ namespace TestRogueLike.Game.Characters.Players
 
         public delegate void OnHotbarChanged();
         public OnHotbarChanged OnHotbarChangedCallback;
-        
+
         public delegate void OnInventoryChanged();
         public OnInventoryChanged OnInventoryChangedCallback;
 
-        public delegate void OnActiveItemChanged();
+        public delegate void OnActiveItemChanged(Item item);
         public OnActiveItemChanged OnActiveItemChangedCallback;
-        
+
         private const int MAX_HOTBAR_SIZE = 9;
         private const int MAX_INVENTORY_SIZE = 21;
-        
-        public List<Item> _hotbar { get; private set; }
-        public List<Item> _inventory { get; private set; }
 
-        private int activeItem;
+        public Item[] _hotbar { get; private set; }
+        public Item[] _inventory { get; private set; }
 
-        public Inventory(Item item, int hotbarSize = 10, int inventorySize = 10)
+        private int _activeItem;
+
+        public Inventory(Item item)
         {
-            _hotbar = new List<Item> { item };
-            _inventory = new List<Item>();
+            _hotbar = new Item[MAX_HOTBAR_SIZE];
+            _inventory = new Item[MAX_INVENTORY_SIZE];
 
-            activeItem = 0;
+            _hotbar[0] = item;
+            _activeItem = 0;
 
             Instance = this;
         }
 
         public void AddItem(Item item)
         {
-            if (_hotbar.Count < MAX_HOTBAR_SIZE)
+            var added = false;
+            for (var i = 0; i < _hotbar.Length; i++)
             {
-                _hotbar.Add(item);
-                OnHotbarChangedCallback.Invoke();
-            } else if (_inventory.Count < MAX_INVENTORY_SIZE) 
-            {
-                _inventory.Add(item);
-                OnInventoryChangedCallback.Invoke();
-            } else
+                if (_hotbar[i] == null)
+                {
+                    _hotbar[i] = item;
+                    added = true;
+                    break;
+                }
+            }
+            if (!added) {
+                for (var i = 0; i < _inventory.Length; i++)
+                {
+                    if (_inventory[i] == null)
+                    {
+                        _inventory[i] = item;
+                        added = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!added)
                 throw new InventoryFullException(item);
+            
+            OnInventoryChangedCallback.Invoke();
+            OnHotbarChangedCallback.Invoke();
+            OnActiveItemChangedCallback.Invoke(GetActiveItem());
         }
 
-        public void RemoveItemInventory(Item item)
+        public void RemoveItem(Item item)
         {
-            _inventory.Remove(item);
+            var removed = false;
+            for (var i = 0; i < _hotbar.Length; i++)
+            {
+                if (_hotbar[i] == item)
+                {
+                    _hotbar[i] = null;
+                    removed = true;
+                    break;
+                }
+            }
+            if (removed)
+                return;
+
+            for (var i = 0; i < _inventory.Length; i++)
+            {
+                if (_inventory[i] == item)
+                {
+                    _inventory[i] = null;
+                    break;
+                }
+            }
+            
             OnInventoryChangedCallback.Invoke();
+            OnHotbarChangedCallback.Invoke();
+            OnActiveItemChangedCallback.Invoke(GetActiveItem());
         }
 
         public void SwitchActiveItem(int index)
         {
-            if (index >= _hotbar.Count || index >= MAX_HOTBAR_SIZE)
+            if (index >= _hotbar.Length || index >= MAX_HOTBAR_SIZE)
                 throw new IndexGreaterThanHotbarSize(index, MAX_HOTBAR_SIZE);
-            
-            activeItem = index;
-            OnActiveItemChangedCallback.Invoke();
-            OnHotbarChangedCallback.Invoke();
+
+            _activeItem = index;
+            OnActiveItemChangedCallback.Invoke(GetActiveItem());
         }
 
         public Item GetActiveItem()
         {
-            return _hotbar[activeItem];
+            return _hotbar[_activeItem];
         }
-        
-        public void SwitchItemInventoryToHotbar(Item itemInventory, int index)
-        {
-            if (index >= MAX_HOTBAR_SIZE)
-                throw new IndexGreaterThanHotbarSize(index, MAX_HOTBAR_SIZE);
 
-            var tmp = _hotbar[index];
-            _hotbar[index] = itemInventory;
-            
-            if (tmp != null)
-            {
-                var invIndex = _inventory.IndexOf(itemInventory);
-                _inventory[invIndex] = tmp;
-            }
+        public void SwapItems(int slotNum1, bool inHotbar1, int slotNum2, bool inHotbar2)
+        {
+            var item1 = inHotbar1 ? 
+                _hotbar[slotNum1] : _inventory[slotNum1];
+            var item2 = inHotbar2 ?
+                _hotbar[slotNum2] : _inventory[slotNum2];
+
+            if (inHotbar1)
+                _hotbar[slotNum1] = item2;
+            else
+                _inventory[slotNum1] = item2;
+
+            if (inHotbar2)
+                _hotbar[slotNum2] = item1;
+            else
+                _inventory[slotNum2] = item1;
             
             OnInventoryChangedCallback.Invoke();
             OnHotbarChangedCallback.Invoke();
-            OnActiveItemChangedCallback.Invoke();
-        }
-
-        public void SwapItems(Item item1, Item item2)
-        {
-            var index1 = _hotbar.IndexOf(item1);
-            var foundInHotbar1 = true;
-            if (index1 == -1)
-            {
-                index1 = _inventory.IndexOf(item1);
-                foundInHotbar1 = false;
-            }
-            
-            var index2 = _hotbar.IndexOf(item2);
-            var foundInHotbar2 = true;
-            if (index2 == -1)
-            {
-                index2 = _inventory.IndexOf(item2);
-                foundInHotbar2 = false;
-            }
-
-            if (foundInHotbar1)
-                _hotbar[index1] = item2;
-            else
-                _inventory[index1] = item2;
-
-            if (foundInHotbar2)
-                _hotbar[index2] = item1;
-            else
-                _inventory[index2] = item1;
-            
-            OnHotbarChangedCallback.Invoke();
-            OnActiveItemChangedCallback.Invoke();
-            OnInventoryChangedCallback.Invoke();
+            OnActiveItemChangedCallback.Invoke(GetActiveItem());
         }
     }
 }

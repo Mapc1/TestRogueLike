@@ -8,6 +8,9 @@ namespace TestRogueLike.Game.Items
         public readonly string name;
         public GameObject mesh { get; private set; }
         public Sprite icon;
+        
+        public delegate void OnItemUpdate(Item item);
+        public static OnItemUpdate OnItemUpdateCallback;
 
         public virtual void Use()
         {
