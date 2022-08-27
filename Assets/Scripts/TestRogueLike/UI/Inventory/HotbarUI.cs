@@ -19,6 +19,7 @@ public class HotbarUI : MonoBehaviour
         {
             _slots[i].SlotNum = i;
         }
+        UpdateUI();
     }
 
     private void UpdateUI()

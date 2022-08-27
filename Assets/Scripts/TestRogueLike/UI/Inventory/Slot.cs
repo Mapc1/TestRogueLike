@@ -16,7 +16,6 @@ namespace TestRogueLike.UI.Inventory
             private CanvasGroup _canvasGroup;
 
             public int SlotNum;
-            public bool Dropped;
         #endregion
 
         private void Start()
@@ -27,23 +26,23 @@ namespace TestRogueLike.UI.Inventory
 
         #region DraggableMethods
 
-        public virtual void OnDrop(PointerEventData eventData)
-        {
-            Debug.Log("OnDrop");
-            var slot = eventData.pointerDrag.gameObject.GetComponent<Slot>();
-            if (slot != null)
-                slot.Dropped = true;
-        }
+            public virtual void OnDrop(PointerEventData eventData)
+                => Debug.Log("OnDrop");
 
             public void OnPointerDown(PointerEventData eventData)
-                => _canvasGroup.alpha = 0.6f;
-           
+            {
+                if (Item != null) 
+                    _canvasGroup.alpha = 0.6f;
+            }
 
             public void OnPointerUp(PointerEventData eventData)
                 => _canvasGroup.alpha = 1.0f;
 
             public void OnBeginDrag(PointerEventData eventData)
             {
+                if (Item == null)
+                    return;
+                
                 _itemCursor.GetComponent<Image>().sprite = Item.icon;
                 _itemCursor.transform.position = Input.mousePosition;
                 _itemCursor.gameObject.SetActive(true);
@@ -55,9 +54,7 @@ namespace TestRogueLike.UI.Inventory
             {
                 _itemCursor.gameObject.SetActive(false);
                 _canvasGroup.blocksRaycasts = true;
-                if (!Dropped)
-                    icon.enabled = true;
-                Dropped = false;
+                icon.enabled = Item != null;
             }
 
             public void OnDrag(PointerEventData eventData)

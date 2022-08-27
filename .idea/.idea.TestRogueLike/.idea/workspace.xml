@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9c50f215-39d7-4e6f-a830-71d967f59980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Items/Weapons/Guns/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/AmmoCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/AmmoCount.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/HotbarSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/HotbarSlot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/HotbarUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/HotbarUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/InventorySlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/InventoryUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/Slot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/ItemText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/ItemText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Players/PlayerWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Players/PlayerWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +104,7 @@
       <workItem from="1661535241015" duration="8332000" />
       <workItem from="1661616520517" duration="2245000" />
       <workItem from="1661618810120" duration="59000" />
-      <workItem from="1661618956483" duration="772000" />
+      <workItem from="1661618956483" duration="2783000" />
     </task>
     <servers />
   </component>
