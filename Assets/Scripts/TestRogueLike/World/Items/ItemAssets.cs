@@ -8,7 +8,10 @@ namespace TestRogueLike.World.Items
     
         private void Awake()
         {
-            Instance = this;
+            if (Instance != null && Instance != this)
+                Destroy(this);
+            else
+                Instance = this;
         }
 
         public GameObject pistolModel;

@@ -75,7 +75,7 @@ namespace TestRogueLike.World.Characters.Players
 
         private void FixedUpdate()
         {
-            _rigidbody.velocity = new Vector3(_horizontalInput, 0, _verticalInput) * Speed;
+            _rigidbody.velocity = new Vector3(_horizontalInput * Speed, _rigidbody.velocity.y, _verticalInput * Speed);
             _rigidbody.transform.LookAt(new Vector3(_lookPos.x, _rigidbody.position.y, _lookPos.z));
 
             if (_equipWeaponButtonPressed != -1)
