@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TestRogueLike.Game.Items.Weapons
 {
-    public class Weapon : Item 
+    public abstract class Weapon : Item 
     {
         public int damage { get; private set; }
         public float attackCooldown { get; private set; }

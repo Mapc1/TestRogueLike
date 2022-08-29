@@ -1,3 +1,4 @@
+using System;
 using TestRogueLike.Game.Characters.Players;
 using TestRogueLike.World.Items.Weapons.Guns.Bullets;
 using UnityEngine;
@@ -49,6 +50,12 @@ namespace TestRogueLike.Game.Items.Weapons.Guns
                 BulletType.Slug => BulletAssets.instance.shotgunSlug,
                 _ => null
             };
+        }
+
+        public override string GetStats()
+        {
+            var fireRate = Math.Round(1 / attackCooldown, 2);
+            return $"Damage: {damage}\nFire Rate: {fireRate} bullets/s";
         }
     }
 }

@@ -6,13 +6,23 @@ using UnityEngine.UI;
 
 namespace TestRogueLike.UI.Inventory
 {
-    public class Slot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+    public class Slot : 
+        MonoBehaviour, 
+        IPointerDownHandler, 
+        IPointerUpHandler, 
+        IBeginDragHandler, 
+        IEndDragHandler, 
+        IDragHandler, 
+        IDropHandler, 
+        IPointerEnterHandler, 
+        IPointerExitHandler
     {
         #region Vars 
             public Item Item { get; private set; }
             public Image icon;
             
             private RectTransform _itemCursor;
+            private ItemInfo _itemInfo;
             private CanvasGroup _canvasGroup;
 
             public int SlotNum;
@@ -21,10 +31,21 @@ namespace TestRogueLike.UI.Inventory
         private void Start()
         {
             _itemCursor = Interface.Instance.ItemCursor;
+            _itemInfo = ItemInfo.Instance;
             _canvasGroup = GetComponent<CanvasGroup>();
         }
 
         #region DraggableMethods
+            public void OnPointerEnter(PointerEventData eventData)
+            {
+                if (Item != null)
+                    _itemInfo.ShowTooltip(Item);
+            }
+
+            public void OnPointerExit(PointerEventData eventData)
+            {
+                _itemInfo.HideTooltip();
+            }
 
             public virtual void OnDrop(PointerEventData eventData)
                 => Debug.Log("OnDrop");
