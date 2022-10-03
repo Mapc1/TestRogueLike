@@ -41,7 +41,7 @@ namespace TestRogueLike.World.Items.Weapons.Guns.Bullets
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.layer == PlayerWorld.LAYER)
+            if (other.gameObject.layer is PlayerWorld.LAYER or LAYER)
                 return;
         
             Destroy(gameObject);

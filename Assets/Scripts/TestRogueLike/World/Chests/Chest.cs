@@ -6,18 +6,22 @@ using TestRogueLike.Game.Items;
 using TestRogueLike.World.Characters.Players;
 using UnityEngine;
 
-public abstract class Chest : MonoBehaviour, Interactable
+namespace TestRogueLike.World.Chests
 {
-    protected List<Type> LootOptions;
-    
-    protected int Loot;
-    protected bool IsOpened;
-    
-    public virtual void Interact(PlayerWorld player)
+    public abstract class Chest : MonoBehaviour, Interactable
     {
-        if (IsOpened) 
-            return;
+        protected List<Type> LootOptions;
+    
+        protected int Loot;
+        protected bool IsOpened;
+    
+        public virtual void Interact(PlayerWorld player)
+        {
+            if (IsOpened) 
+                return;
         
-        Inventory.Instance.AddItem((Item) Activator.CreateInstance(LootOptions[Loot]));
+            Inventory.Instance.AddItem((Item) Activator.CreateInstance(LootOptions[Loot]));
+            IsOpened = true;
+        }
     }
 }

@@ -1,29 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+namespace TestRogueLike.UI
 {
-    #region Singleton
+    public class PauseMenu : MonoBehaviour
+    {
+        #region Singleton
         public static PauseMenu Instance;
 
         private void Awake()
         {
             if (Instance != null && Instance != this)
                 Destroy(this);
-            else
+            else {
+                IsOpen = pauseMenu.activeSelf;
                 Instance = this;
+            }
         }
-    #endregion
+        #endregion
 
-    [SerializeField] private GameObject pauseMenu;
+        [SerializeField] private GameObject pauseMenu;
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("Pause"))
-            pauseMenu.SetActive(!pauseMenu.activeSelf);
+        public bool IsOpen;
 
-        Time.timeScale = pauseMenu.activeSelf ?
-            0 : 1;
+        private void Update()
+        {
+            if (Input.GetButtonDown("Pause") && !InventoryUI.Instance.IsInventoryOpen)
+                IsOpen = !IsOpen;
+
+            pauseMenu.SetActive(IsOpen);
+            Time.timeScale = pauseMenu.activeSelf ?
+                0 : 1;
+        }
     }
 }

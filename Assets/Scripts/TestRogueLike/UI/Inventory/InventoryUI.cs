@@ -1,5 +1,6 @@
 using System;
 using TestRogueLike.Game.Characters.Players;
+using TestRogueLike.UI;
 using TestRogueLike.UI.Inventory;
 using UnityEngine;
 
@@ -31,10 +32,11 @@ public class InventoryUI : MonoBehaviour
 
     public void LateUpdate()
     {
-        if (!Input.GetButtonDown("Inventory"))
-            return;
+        if (Input.GetButtonDown("Inventory") && !PauseMenu.Instance.IsOpen)
+            IsInventoryOpen = !inventoryUI.activeSelf;
+        else if (Input.GetButtonDown("Cancel") && IsInventoryOpen)
+            IsInventoryOpen = false;
         
-        IsInventoryOpen = !inventoryUI.activeSelf;
         inventoryUI.SetActive(IsInventoryOpen);
     }
 

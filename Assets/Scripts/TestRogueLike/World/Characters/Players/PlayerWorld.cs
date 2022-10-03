@@ -33,8 +33,7 @@ namespace TestRogueLike.World.Characters.Players
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            Player = new Player(maxHP, new Pistol());
-            _equippedItemWorld = Inventory.Instance.GetActiveItem().PlaceItem(weaponHolder);
+            Player = new Player(maxHP, new Shotgun());
 
             Inventory.Instance.OnActiveItemChangedCallback += PlaceItemWorld;
         }

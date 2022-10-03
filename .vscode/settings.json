@@ -2,7 +2,11 @@
     // Configure glob patterns for excluding files and folders.
     "files.exclude": {
         "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
         "**/.DS_Store": true,
+        "**/Thumbs.db": true,
         "**/*.meta": true,
         "**/*.*.meta": true,
         "**/*.unity": true,
@@ -15,6 +19,18 @@
         "**/*.prefab": true,
         "**/Library": true,
         "**/ProjectSettings": true,
-        "**/Temp": true
-    }
+        "**/Temp": true,
+        "**/Gimp": true,
+        "**/resources": true,
+        "**/TextMesh Pro": true,
+        "**/Packages": true,
+        "**/Logs": true,
+        "**/obj": true,
+        "**/UserSettings": true,
+        "**/*.sln": true,
+        "**/*.csproj": true,
+        "**/.idea": true,
+        "**/.vscode": false
+    },
+    "explorerExclude.backup": {}
 }

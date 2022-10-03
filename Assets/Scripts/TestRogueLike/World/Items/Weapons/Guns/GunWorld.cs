@@ -59,12 +59,11 @@ namespace TestRogueLike.World.Items.Weapons.Guns
                 bullet.direction = _transform.forward;
                 bullet.spawnPos = _transform.position;
                 bullet.damage = gun.damage;
-                var newBullet = Instantiate(bullet.gameObject, _transform.position, Quaternion.identity);
+                var newBullet = Instantiate(bullet.gameObject, bullet.spawnPos, Quaternion.identity);
                 newBullet.gameObject.SetActive(true);
 
                 gun.Fire();
                 _audioSource.PlayOneShot(attackSound);
-                //UpdateAmmoCount();
             }
             else
             {
@@ -80,22 +79,6 @@ namespace TestRogueLike.World.Items.Weapons.Guns
             
             gun.Reload();
             _audioSource.PlayOneShot(reloadSound);
-            //UpdateAmmoCount();
         }
-
-        /*
-        public void UpdateUI()
-        {
-            var gun = (Gun)_item;
-            nameText.SetText(gun.name);
-            UpdateAmmoCount();
-        }
-
-        private void UpdateAmmoCount()
-        {
-            var gun = (Gun)_item;
-            ammoText.SetText($"{gun.bulletsRemaining}/{gun.magSize}");
-        }
-        */
     }
 }
