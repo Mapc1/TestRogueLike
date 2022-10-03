@@ -1,9 +1,11 @@
+using System;
 using TestRogueLike.Game.Items;
 using TestRogueLike.Game.Items.Weapons;
 using TestRogueLike.Game.Items.Weapons.Guns;
 using TestRogueLike.World.Items.Weapons.Guns.Bullets;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 namespace TestRogueLike.World.Items.Weapons.Guns
 {
@@ -11,10 +13,11 @@ namespace TestRogueLike.World.Items.Weapons.Guns
     {
         [SerializeField] protected AudioClip magEmptySound;
         [SerializeField] protected AudioClip reloadSound;
+        [SerializeField] protected int forceMissRadius;
 
-        protected BulletWorld bullet; 
+        protected BulletWorld Bullet; 
         
-        protected bool reloadButtonPressed;
+        protected bool ReloadButtonPressed;
         
         private void Update()
         {
@@ -24,7 +27,7 @@ namespace TestRogueLike.World.Items.Weapons.Guns
             if (Input.GetButtonDown("Fire1"))
                 attackButtonPressed = true;
             else if (Input.GetButtonDown("Reload"))
-                reloadButtonPressed = true;
+                ReloadButtonPressed = true;
         }
 
         private void FixedUpdate()
@@ -34,10 +37,10 @@ namespace TestRogueLike.World.Items.Weapons.Guns
                 Attack();
                 attackButtonPressed = false;
             }
-            else if (reloadButtonPressed)
+            else if (ReloadButtonPressed)
             {
                 Reload();
-                reloadButtonPressed = false;
+                ReloadButtonPressed = false;
             }
         }
 
@@ -45,7 +48,7 @@ namespace TestRogueLike.World.Items.Weapons.Guns
         {
             _item = item;
             var gun = (Gun)item;
-            bullet = gun.GetBullet();
+            Bullet = gun.GetBullet();
         }
 
         protected override void Attack()
@@ -56,10 +59,14 @@ namespace TestRogueLike.World.Items.Weapons.Guns
             
             if (gun.BulletsRemaining > 0)
             {
-                bullet.direction = _transform.forward;
-                bullet.spawnPos = _transform.position;
-                bullet.damage = gun.damage;
-                var newBullet = Instantiate(bullet.gameObject, bullet.spawnPos, Quaternion.identity);
+                var yaw = Random.Range(-forceMissRadius, forceMissRadius) * (Math.PI / 180);
+                var pitch = Random.Range(-forceMissRadius, forceMissRadius) * (Math.PI / 180);
+
+                var forward = _transform.forward;
+                Bullet.direction = new Vector3(forward.x + (float) Math.Sin(yaw), forward.y + (float) Math.Sin(pitch), forward.z);
+                Bullet.spawnPos = _transform.position;
+                Bullet.damage = gun.damage;
+                var newBullet = Instantiate(Bullet.gameObject, Bullet.spawnPos, Quaternion.identity);
                 newBullet.gameObject.SetActive(true);
 
                 gun.Fire();

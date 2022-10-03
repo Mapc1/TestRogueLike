@@ -24,13 +24,13 @@ namespace TestRogueLike.World.Items.Weapons.Guns
             {
                 for (var i = 0; i < 5; i++)
                 {
-                    var yaw = Random.Range(-10, 10) * (Math.PI / 180);
-                    var pitch = Random.Range(-10, 10) * (Math.PI / 180);
+                    var yaw = Random.Range(-forceMissRadius, forceMissRadius) * (Math.PI / 180);
+                    var pitch = Random.Range(-forceMissRadius, forceMissRadius) * (Math.PI / 180);
                     var forward = _transform.forward;
-                    bullet.direction = new Vector3(forward.x + (float) Math.Sin(yaw), forward.y + (float) Math.Sin(pitch), forward.z).normalized;
-                    bullet.spawnPos = _transform.position;
-                    bullet.damage = shotty.damage;
-                    var newBullet = Instantiate(bullet.gameObject, bullet.spawnPos, Quaternion.identity);
+                    Bullet.direction = new Vector3(forward.x + (float) Math.Sin(yaw), forward.y + (float) Math.Sin(pitch), forward.z).normalized;
+                    Bullet.spawnPos = _transform.position;
+                    Bullet.damage = shotty.damage;
+                    var newBullet = Instantiate(Bullet.gameObject, Bullet.spawnPos, Quaternion.identity);
                     newBullet.gameObject.SetActive(true);
                 }
                 

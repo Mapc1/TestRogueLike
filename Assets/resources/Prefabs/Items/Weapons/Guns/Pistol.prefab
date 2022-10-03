@@ -49,6 +49,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: d9eac9b00270b72738574732f9213ca0, type: 3}
   magEmptySound: {fileID: 8300000, guid: 195bb8c5a312edff2ade9cebc6b45428, type: 3}
   reloadSound: {fileID: 8300000, guid: ff80c7a9cc32655628d4d127cda7d0a4, type: 3}
+  forceMissRadius: 5
 --- !u!82 &3415593278282884019
 AudioSource:
   m_ObjectHideFlags: 0

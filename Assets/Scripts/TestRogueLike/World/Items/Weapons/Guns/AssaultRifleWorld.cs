@@ -21,17 +21,17 @@ namespace TestRogueLike.World.Items.Weapons.Guns
             else if (Input.GetButtonUp("Fire1"))
                 attackButtonPressed = false;
             else if (Input.GetButtonDown("Reload"))
-                reloadButtonPressed = true;
+                ReloadButtonPressed = true;
         }
         
         private void FixedUpdate()
         {
             if (attackButtonPressed)
                 Attack();
-            else if (reloadButtonPressed)
+            else if (ReloadButtonPressed)
             {
                 Reload();
-                reloadButtonPressed = false;
+                ReloadButtonPressed = false;
             }
         }
     }
