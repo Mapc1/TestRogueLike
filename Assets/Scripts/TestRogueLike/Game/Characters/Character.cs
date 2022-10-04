@@ -2,13 +2,13 @@ namespace TestRogueLike.Game.Characters
 {
     public abstract class Character
     {
-        private readonly int maxHP;
-        private int curHP;
-
+        public readonly int MaxHP;
+        public int CurHP { get; protected set; }
+        
         protected Character(int maxHP)
         {
-            this.maxHP = maxHP;
-            curHP = maxHP;
+            MaxHP = maxHP;
+            CurHP = maxHP;
         }
     }
 }

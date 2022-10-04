@@ -1,3 +1,5 @@
+using TestRogueLike.Game.Characters.Enemies;
+using TestRogueLike.Game.Items.Weapons;
 using TestRogueLike.World.Items.Weapons.Guns.Bullets;
 using UnityEngine;
 
@@ -7,15 +9,18 @@ namespace TestRogueLike.World.Characters.Enemies
     {
         [SerializeField] private HealthBar healthBar;
         [SerializeField] private int maxHP;
+        [SerializeField] private Weapon weapon;
     
-        private int _curHP;
+        public Enemy _enemy;
 
         private Rigidbody _rigidbody;
 
-        private void Start()
+        private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            _curHP = maxHP;
+            _enemy = new Enemy(maxHP, weapon);
+            
+            _enemy.OnDeathCallback += OnDeath;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -24,14 +29,13 @@ namespace TestRogueLike.World.Characters.Enemies
             if (other.gameObject.layer != BulletWorld.LAYER || bullet == null)
                 return;
 
-            _curHP -= bullet.damage;
-            healthBar.UpdateHP(_curHP, maxHP);
+            _enemy.TakeDmg(bullet.damage);
             _rigidbody.AddForce(Vector3.up * 2, ForceMode.VelocityChange);
-            
-            if (_curHP <= 0)
-            {
-                Destroy(gameObject);
-            }
+        }
+
+        private void OnDeath()
+        {
+            Destroy(gameObject);
         }
     }
 }

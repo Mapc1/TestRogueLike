@@ -10,41 +10,42 @@ namespace TestRogueLike.World.Characters.Enemies
         [SerializeField] private Image foreground;
         [SerializeField] private Image tween;
 
+        [SerializeField] private EnemyWorld enemyWorld;
+
         private int _curHP;
         private int _maxHP;
         private float _curFill;
         private float _intendedFill;
 
-        
-        void Start()
+
+        private void Start()
         {
             _intendedFill = 1;
             _curFill = 1;
+            _maxHP = enemyWorld._enemy.MaxHP;
+            _curHP = enemyWorld._enemy.CurHP;
+            enemyWorld._enemy.OnHPChangedCallback += UpdateHP;
         }
 
         private void Update()
         {
-            if (Math.Abs(_curFill - _intendedFill) > 0.000005)
-            {
-                _curFill -= tweenSpeed;
-                if (_curFill < _intendedFill)
-                {
-                    _curFill = _intendedFill;
-                }
+            if (!(Math.Abs(_curFill - _intendedFill) > 0.000005)) 
+                return;
+            
+            _curFill -= tweenSpeed;
+            if (_curFill < _intendedFill)
+                _curFill = _intendedFill;
                 
-                tween.fillAmount = _curFill;
-            }
+            tween.fillAmount = _curFill;
 
         }
 
-        public void UpdateHP(int curHP, int maxHP)
+        private void UpdateHP()
         {
-            _curHP = curHP;
-            _maxHP = maxHP;
+            _curHP = enemyWorld._enemy.CurHP;
 
-            float newFill = (float) _curHP / _maxHP;
-            foreground.fillAmount = newFill;
-            _intendedFill = newFill;
+            _intendedFill = (float) _curHP / _maxHP;
+            foreground.fillAmount = _intendedFill;
         }
     }
 }

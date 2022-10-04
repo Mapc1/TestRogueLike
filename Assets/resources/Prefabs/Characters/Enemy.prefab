@@ -500,6 +500,7 @@ MonoBehaviour:
   tweenSpeed: 0.003
   foreground: {fileID: 1826676100022073900}
   tween: {fileID: 6942457058169689968}
+  enemyWorld: {fileID: 1826676099899933269}
 --- !u!1 &4775350303222598727
 GameObject:
   m_ObjectHideFlags: 0

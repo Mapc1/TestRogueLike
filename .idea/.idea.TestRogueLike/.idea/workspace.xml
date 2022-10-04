@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9c50f215-39d7-4e6f-a830-71d967f59980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/AssaultRifleWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/AssaultRifleWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/GunWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/ShotgunWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/ShotgunWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/BasicEnemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/BasicEnemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Enemies/EnemyWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Enemies/EnemyWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Enemies/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Enemies/HealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/resources/Prefabs/Characters/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Prefabs/Characters/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/resources/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Scenes/Main.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +18,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12d27ebfb46146b18b40876234894c77468a00/fa/f4d16610/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Assets/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Cameras/MainCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Chests/Chest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,10 +67,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4303">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="4303" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -127,7 +134,8 @@
       <workItem from="1664475668373" duration="351000" />
       <workItem from="1664476396985" duration="6597000" />
       <workItem from="1664546163934" duration="1339000" />
-      <workItem from="1664801111586" duration="2291000" />
+      <workItem from="1664801111586" duration="4122000" />
+      <workItem from="1664884188187" duration="2082000" />
     </task>
     <servers />
   </component>
@@ -152,62 +160,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Assets/Door.cs</url>
-          <line>24</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Assets/Door.cs" initialLine="24" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="610" />
-            </startOffsets>
-            <endOffsets>
-              <option value="649" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs" initialLine="21" containingFunctionPresentation="method 'Awake'">
-            <startOffsets>
-              <option value="570" />
-            </startOffsets>
-            <endOffsets>
-              <option value="609" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs</url>
-          <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs" initialLine="29" containingFunctionPresentation="method 'FixedUpdate'">
-            <startOffsets>
-              <option value="800" />
-            </startOffsets>
-            <endOffsets>
-              <option value="832" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs</url>
-          <line>43</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Items/Weapons/Guns/Bullets/BulletWorld.cs" initialLine="43" containingFunctionPresentation="method 'OnTriggerEnter'">
-            <startOffsets>
-              <option value="1275" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1332" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#TestRogueLike.Game.Characters.Players.Inventory" memberName="_inventory" />
