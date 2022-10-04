@@ -5,6 +5,7 @@ using TestRogueLike.Game.Characters.Players;
 using TestRogueLike.Game.Items;
 using TestRogueLike.World.Characters.Players;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace TestRogueLike.World.Chests
 {
@@ -21,7 +22,8 @@ namespace TestRogueLike.World.Chests
                 return;
         
             Inventory.Instance.AddItem((Item) Activator.CreateInstance(LootOptions[Loot]));
-            IsOpened = true;
+            Loot = Random.Range(0, LootOptions.Count);
+            //IsOpened = true;
         }
     }
 }

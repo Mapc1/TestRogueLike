@@ -17,6 +17,9 @@ namespace TestRogueLike.Game.Characters.Players
 
         public delegate void OnActiveItemChanged(Item item);
         public OnActiveItemChanged OnActiveItemChangedCallback;
+        
+        public delegate void OnItemPickup(Item item);
+        public OnItemPickup OnItemPickupCallback;
 
         private const int MAX_HOTBAR_SIZE = 9;
         private const int MAX_INVENTORY_SIZE = 21;
@@ -67,6 +70,7 @@ namespace TestRogueLike.Game.Characters.Players
             OnInventoryChangedCallback.Invoke();
             OnHotbarChangedCallback.Invoke();
             OnActiveItemChangedCallback.Invoke(GetActiveItem());
+            OnItemPickupCallback.Invoke(item);
         }
 
         public void RemoveItem(Item item)
