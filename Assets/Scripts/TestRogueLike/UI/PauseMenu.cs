@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TestRogueLike.UI
@@ -12,7 +13,7 @@ namespace TestRogueLike.UI
             if (Instance != null && Instance != this)
                 Destroy(this);
             else {
-                IsOpen = pauseMenu.activeSelf;
+                isOpen = pauseMenu.activeSelf;
                 Instance = this;
             }
         }
@@ -20,16 +21,47 @@ namespace TestRogueLike.UI
 
         [SerializeField] private GameObject pauseMenu;
 
-        public bool IsOpen;
+        public bool isOpen;
+        private readonly Stack<GameObject> _stateStack = new();
 
-        private void Update()
+        private void LateUpdate()
         {
-            if (Input.GetButtonDown("Pause") && !InventoryUI.Instance.IsInventoryOpen)
-                IsOpen = !IsOpen;
+            if (!Input.GetButtonDown("Pause") || InventoryUI.Instance.IsInventoryOpen)
+                return;
+            
+            if (isOpen)
+                PopState();
+            else
+                PushState(pauseMenu);
+        }
 
-            pauseMenu.SetActive(IsOpen);
-            Time.timeScale = pauseMenu.activeSelf ?
-                0 : 1;
+        public void PushState(GameObject obj)
+        {
+            if (_stateStack.Count != 0)
+            {
+                var top = _stateStack.Peek();
+                top.SetActive(false);
+            }
+
+            isOpen = true;
+            Time.timeScale = 0;
+            _stateStack.Push(obj);
+            obj.SetActive(true);
+        }
+
+        public void PopState()
+        {
+            var top = _stateStack.Pop();
+            top.SetActive(false);
+            if (_stateStack.Count == 0)
+            {
+                isOpen = false;
+                Time.timeScale = 1;
+                return;
+            }
+            
+            var newTop = _stateStack.Peek();
+            newTop.SetActive(true);
         }
     }
 }

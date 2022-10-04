@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9c50f215-39d7-4e6f-a830-71d967f59980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/Game/Characters/Players/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Chests/Chest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Chests/Chest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Inventory/InventoryUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Menus/SettingsCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Menus/SettingsCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/resources/Prefabs/UI/Interface.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Prefabs/UI/Interface.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/resources/Prefabs/UI/Menus/Settings/Setting.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Prefabs/UI/Menus/Settings/Setting.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/resources/Prefabs/UI/Menus/Settings/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Prefabs/UI/Menus/Settings/Settings.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/resources/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/resources/Scenes/Main.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +18,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12d27ebfb46146b18b40876234894c77468a00/41/5cf5aabd/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12d27ebfb46146b18b40876234894c77468a00/a1/b36f210c/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12d27ebfb46146b18b40876234894c77468a00/fa/f4d16610/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Assets/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Cameras/MainCamera.cs" root0="FORCE_HIGHLIGHTING" />
@@ -132,7 +136,7 @@
       <workItem from="1664546163934" duration="1339000" />
       <workItem from="1664801111586" duration="4122000" />
       <workItem from="1664884188187" duration="3668000" />
-      <workItem from="1664896296959" duration="2396000" />
+      <workItem from="1664896296959" duration="8729000" />
     </task>
     <servers />
   </component>
@@ -157,6 +161,49 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Menus/MenuCard.cs</url>
+          <line>10</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Menus/MenuCard.cs" initialLine="10" containingFunctionPresentation="method 'OnPointerClick'">
+            <startOffsets>
+              <option value="290" />
+            </startOffsets>
+            <endOffsets>
+              <option value="299" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/PauseMenu.cs</url>
+          <line>39</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/PauseMenu.cs" initialLine="38" containingFunctionPresentation="method 'PushState'">
+            <startOffsets>
+              <option value="971" />
+            </startOffsets>
+            <endOffsets>
+              <option value="998" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/PauseMenu.cs</url>
+          <line>53</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/PauseMenu.cs" initialLine="53" containingFunctionPresentation="method 'PopState'">
+            <startOffsets>
+              <option value="1303" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1331" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#TestRogueLike.Game.Characters.Players.Inventory" memberName="_inventory" />

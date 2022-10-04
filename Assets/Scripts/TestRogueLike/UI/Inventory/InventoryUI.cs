@@ -32,7 +32,7 @@ public class InventoryUI : MonoBehaviour
 
     public void LateUpdate()
     {
-        if (Input.GetButtonDown("Inventory") && !PauseMenu.Instance.IsOpen)
+        if (Input.GetButtonDown("Inventory") && !PauseMenu.Instance.isOpen)
             IsInventoryOpen = !inventoryUI.activeSelf;
         else if (Input.GetButtonDown("Cancel") && IsInventoryOpen)
             IsInventoryOpen = false;
