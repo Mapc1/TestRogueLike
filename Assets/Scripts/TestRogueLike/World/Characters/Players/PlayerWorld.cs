@@ -1,11 +1,10 @@
+using System;
 using TestRogueLike.Common;
-using TestRogueLike.Exceptions.Characters.Players;
 using TestRogueLike.Game.Characters.Players;
 using TestRogueLike.Game.Items;
 using TestRogueLike.Game.Items.Weapons.Guns;
 using TestRogueLike.World.Items;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace TestRogueLike.World.Characters.Players
 {
@@ -82,6 +81,13 @@ namespace TestRogueLike.World.Characters.Players
                 Inventory.Instance.SwitchActiveItem(_equipWeaponButtonPressed);
                 _equipWeaponButtonPressed = -1;
             }
+        }
+
+        // Reset interaction button in case the player pressed it while not in the
+        // vicinity of any interactible objects
+        private void OnTriggerEnter(Collider other)
+        {
+            _interactButtonPressed = false;
         }
 
         private void OnTriggerStay(Collider other)

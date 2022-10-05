@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9c50f215-39d7-4e6f-a830-71d967f59980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestRogueLike/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Players/PlayerWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/World/Characters/Players/PlayerWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Editor/2021.3.10f1/Editor/Unity" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2021.3.11f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -130,6 +132,7 @@
       <workItem from="1664801111586" duration="4122000" />
       <workItem from="1664884188187" duration="3668000" />
       <workItem from="1664896296959" duration="8729000" />
+      <workItem from="1664985831410" duration="3126000" />
     </task>
     <servers />
   </component>
@@ -194,19 +197,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Menus/QuitCard.cs</url>
-          <line>8</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/TestRogueLike/UI/Menus/QuitCard.cs" initialLine="8" containingFunctionPresentation="method 'Select'">
-            <startOffsets>
-              <option value="165" />
-            </startOffsets>
-            <endOffsets>
-              <option value="184" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
